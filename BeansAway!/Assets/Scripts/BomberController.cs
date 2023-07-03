@@ -35,10 +35,15 @@ public class BomberController : MonoBehaviour {
     private float bombReloadTime = 2.0f;
     private float fireGuns;
     private float gunsAmmo;
+
+    public bool menuBomber;
+
+    private float propVolume = 0.01f;
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
         bomberInput = new BomberInput();
+        if (menuBomber) { throttle = 100f; maxThrust = 0.001f; }
     }
     // Start is called before the first frame update
     void Start() {
@@ -83,7 +88,7 @@ public class BomberController : MonoBehaviour {
         UpdateHUD();
 
         propeller.Rotate(Vector3.forward * throttle * 0.1f);
-        engineSound.volume = throttle * 0.01f;
+        engineSound.volume = throttle * 0.01f * propVolume;
     }
 
     private void FixedUpdate() {

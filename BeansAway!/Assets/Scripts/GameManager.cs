@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Cinemachine;
 
 public enum GameState
 {
@@ -16,6 +17,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     private CanvasManager canvasManager;
     private GameState currentState;
+    private List<CinemachineVirtualCamera> cameraList;
 
     protected override void Awake()
     {
