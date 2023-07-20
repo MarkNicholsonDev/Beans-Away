@@ -43,11 +43,12 @@ public class BomberController : MonoBehaviour {
     private void Awake() {
         rb = GetComponent<Rigidbody>();
         bomberInput = new BomberInput();
+        bomberInput.Enable();
+
         if (menuBomber) { throttle = 100f; maxThrust = 0.001f; }
     }
     // Start is called before the first frame update
     void Start() {
-        bomberInput.Enable();
         engineSound = GetComponent<AudioSource>();
         StartCoroutine(ReloadBombs());
     }

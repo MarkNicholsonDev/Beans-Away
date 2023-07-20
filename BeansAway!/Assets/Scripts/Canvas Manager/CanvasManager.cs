@@ -28,7 +28,6 @@ public class CanvasManager : Singleton<CanvasManager>
         {
             lastActiveCanvas.gameObject.SetActive(false);
         }
-        else { Debug.LogWarning("The last active canvas wasn't found!"); }
 
         CanvasController desiredCanvas = canvasControllerList.Find(x => x.canvasType == newCanvas);
         if (desiredCanvas)
