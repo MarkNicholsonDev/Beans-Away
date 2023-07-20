@@ -8,7 +8,7 @@ public class BomberController : MonoBehaviour {
     //Movement handling
     private float maxThrust = 200f;
     private float throttleAccel = 0.1f;
-    private float bomberResponsiveness = 10f;
+    private float bomberResponsiveness = 20f;
     private float throttle;
     private float pitch;
     private float roll;
@@ -37,6 +37,7 @@ public class BomberController : MonoBehaviour {
     private float gunsAmmo;
 
     public bool menuBomber;
+    public Vector3 startPos;
 
     private float propVolume = 0.01f;
     
@@ -51,6 +52,7 @@ public class BomberController : MonoBehaviour {
     void Start() {
         engineSound = GetComponent<AudioSource>();
         StartCoroutine(ReloadBombs());
+        startPos = this.transform.position;
     }
 
     private void OnEnable() {
@@ -158,6 +160,11 @@ public class BomberController : MonoBehaviour {
 
     public void IncrementScore(int val) {
         score += val;
+    }
+
+    public void ResetBomber() {
+        throttle = 0.0f;
+        score = 0;
     }
 
     //Input handling
