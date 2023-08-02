@@ -11,15 +11,15 @@ public class Checkpoint : MonoBehaviour
     public Material nextNextMat;
     void Awake()
     {
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         gameObject.SetActive(false);
 
         gameManager = FindObjectOfType<GameManager>();
         if (gameManager == null) { Debug.LogWarning("Game Manager not found"); }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
     // Update is called once per frame

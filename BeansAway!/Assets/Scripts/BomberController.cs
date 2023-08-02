@@ -8,7 +8,7 @@ public class BomberController : MonoBehaviour {
     //Movement handling
     private float maxThrust = 200f;
     private float throttleAccel = 0.1f;
-    private float bomberResponsiveness = 20f;
+    private float bomberResponsiveness = 40f;
     private float throttle;
     private float pitch;
     private float roll;
@@ -39,7 +39,7 @@ public class BomberController : MonoBehaviour {
     public bool menuBomber;
     public Vector3 startPos;
 
-    private float propVolume = 0.01f;
+    private float propVolume = 0.05f;
     
     private void Awake() {
         rb = GetComponent<Rigidbody>();
