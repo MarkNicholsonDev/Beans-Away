@@ -5,7 +5,7 @@ Just a prewarning this was made in 2 days for the Jame Gam #29(4 day game jam bu
 
 There is a simple tutorial level of learning to fly through checkpoints to another airbase to get used to the controls, other levels may be added in the future.
 
-#Controls:
+# Controls:
 Space and Ctrl for throttle increase and decrease.
 S and W for control of the pitch of the aircraft (Up and Down)
 A and D for controlling rolling of the aircraft (Left and Right)
